@@ -1,4 +1,110 @@
-/*
- * CSS Styles Base - Copyright 2020, Vancouver Film School
- *
- */
+body {
+    background-color:rgb(150, 146, 146);
+}
+.options-menu{ 
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
+    float: right; */
+    padding: 30px 50px 0 50px;
+    width: 400px;
+    color: rgb(206, 38, 38);
+    font-size: 2em;
+}
+.top-menu-bar {
+    overflow:hidden;
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.dropdown {
+    float:left;
+    overflow:hidden;
+}
+.dropdown .dropbutton {
+    font-size: 18px;
+    border:2px;
+    outline: 1px;
+    color: brown;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0; 
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float:left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;    
+    display:block;    
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .right {
+    float: right;
+    overflow:hidden;
+}
+.menu{
+    display: flex;
+}
+.left-menu {
+    display: inline-block;
+}
+.left-options-main {    
+    display: inline-block;
+    margin-top: 10px;    
+    background-color: #f1d7d7;
+    width: 400px;
+    height: 300px;
+    overflow-y: scroll; 
+}
+.left-options-main .options-button {
+    margin-top: 20px;
+    width: 100%;    
+    text-align: center;
+    display:block;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer; 
+    font-size: 16px;    
+}
+.bottom-btn {
+    display:flex;        
+}
+.bottom-btn .button {
+    width: 50%;
+}
+.options-button:hover {
+    background-color: #555;
+}
+.main-prefab-section {
+    display: flex;
+}
+#image-container {
+    display:inline-block;
+    margin-top: 20px;    
+    overflow-y: scroll;
+    background-color: #641b1b;
+    width: 400px;
+    height: 300px;          
+}
+.image {
+    margin-bottom: 10px;
+    display:inline-block;    
+    width: 200px;
+    height: 200px;    
+}
+
+
+

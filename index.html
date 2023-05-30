@@ -1,47 +1,86 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>VFS HTML5 Base</title>
-
-        <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="VFS HTML5 Base">
-
-        <link rel="stylesheet" type="text/css" href="./css/style-base.css">
-        <link rel="stylesheet" type="text/css" href="./css/style-grid.css">
-        <link rel="stylesheet" type="text/css" href="./css/style-flex.css">
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-
+        <title>Level Editor</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="/scripts/index.js"></script>
     </head>
-    <body>
-        <header class="grid-row-top grid-column-full">
-            <h2>App name</h2>
-        </header>
+    <body>        
+        <section id="main-screen">
+            <div class="main-div">   
+                <div class="top-menu-bar">
+                    <div class="dropdown">
+                        <button class="dropbutton">FILE</button>                      
+                        <div class="dropdown-content">
+                            <a href="#">New</a>
+                            <a href="#">Open</a>
+                            <a href="#">Load</a>
+                            <a href="#">Save</a>
+                            <a href="#">Save As</a>
+                            <a href="#">Close</a>                          
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbutton">EDIT</button>                         
+                        <div class="dropdown-content">
+                            <a href="#">Current</a>
+                            <a href="#">New</a>
+                          </div>
+                    </div>
+                    <div class="dropdown right">
+                        <button class="dropbutton">ABOUT</button>                         
+                        <div class="dropdown-content">
+                            <a href="#">##</a>
+                            <a href="#">##</a>
+                          </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="left-menu">
 
-        <aside>
-            Sidebar here, please format me
-        </aside>
+                        <div class="left-options-main">
+                            <div class="level-options">
+                                <button class="options-button">Name</button>
+                                <button class="options-button">Background</button>
+                                <button class="options-button">Floor</button>
+                                <button class="options-button">Order</button>
+                                <div class="bottom-btn">
+                                    <button class="options-button">Cancel</button> 
+                                    <button class="options-button">Save</button>                           
+                                </div>
+                            </div>
+                        </div>
+                        <div id ="main-prefab-section">
+                            <div id="image-container">
+                                <div class="image" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                    <img src="/assets/beam.png" alt="Beam" draggable="true" ondragstart="drag(event)" id="Beam">
+                                    <div class="prefab-button">                            
+                                        <button class="edit-button">Edit</button>
+                                    </div>
+                                </div>
+                                <div class="image" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                    <img src="/assets/column.png" alt="Column" draggable="true" ondragstart="drag(event)" id="Column">
+                                    <div class="prefab-button">                            
+                                        <button class="edit-button">Edit</button>
+                                    </div>
+                                </div>
+                                <div class="image" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                    <img src="/assets/pig.png" alt="Pig" draggable="true" ondragstart="drag(event)" id="Pig">
+                                    <div class="prefab-button">                            
+                                        <button class="edit-button">Edit</button>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div id="level-div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <canvas id="level-canvas" width="1203px" height="600px" style="border:1px solid #d3d3d3; margin-top: 10px; margin-left: 20px;"></canvas>
+                        <img id="level-img" width="0" height="0" src="/assets/background.png" alt="The Map">  
+                    </div>
 
-        <main class="grid-row-main grid-column-main">
-
-            <section id="screen-1" class="flexbox">
-
-                <button id="press-me">Press Me</button>
-                <dialog id="result-dlg">
-                    Something happened
-                    <button id="close-me">Close</button>
-                </dialog>
-            </section>
-            <section id="screen-2">
-
-            </section>
-
-        </main>
-        <footer>
-            Copyright &copy 2022, &ltstudent name&gt
-        </footer>
-
-        <script type="module" src="./index.js"></script>
-
+                </div>
+            </div>
+           
+        </section>        
     </body>
 </html>

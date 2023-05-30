@@ -41,7 +41,8 @@ export default class App {
         this.#dialogState = !this.#dialogState;
         document.querySelector("#result-dlg").close()
         console.log( msg )
-    }
+    }  
+
 
 
 }
